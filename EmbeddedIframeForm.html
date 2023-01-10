@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!-- <meta http-equiv="Content-Security-Policy" content="img-src https://* http://*; 　script-src https://cse.google.com pi.pardot.com s7.addthis.com;"> -->
+<meta http-equiv="Content-Security-Policy" content="img-src https://*; 　script-src *;">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WLHGJN');</script>
+<!-- End Google Tag Manager -->
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<title>BikeShop - Embedded Iframe Form</title>
+
+</head>
+<body>
+<p> BikeShopWeb_Wheel Campaign tracking code　が入っている。</p>
+
+<div>
+Form:EmailOnlyのIframe（Parameter渡しのScriptなし）
+<iframe src="https://go.yukikolocal.tk/l/232782/2018-01-09/3lhhy" width="100%" height="500" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
+</div>
+
+<div>
+Form:住所自動入力(Case18677473)のIframe（Parameter渡しのScriptあり）
+参照：https://help.salesforce.com/s/articleView?id=000317377&type=1
+
+<noscript>
+ <iframe src="https://go.yukikolocal.tk/l/232782/2018-03-28/4732y" width="100%" height="500" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
+</noscript>
+
+</div>
+
+<script type="text/javascript">
+ var form = 'https://go.yukikolocal.tk/l/232782/2018-03-28/4732y';
+ var params = window.location.search;
+ var thisScript = document.scripts[document.scripts.length - 1];
+ var iframe = document.createElement('iframe');
+
+ iframe.setAttribute('src', form + params);
+ iframe.setAttribute('width', '100%');
+ iframe.setAttribute('height', 500);
+ iframe.setAttribute('type', 'text/html');
+ iframe.setAttribute('frameborder', 0);
+ iframe.setAttribute('allowTransparency', 'true');
+ iframe.style.border = '0';
+
+ thisScript.parentElement.replaceChild(iframe, thisScript);
+</script>
+
+<!-- Pardot BikeShopWeb_Wheel Campaign tracking code -->
+<script type="text/javascript">
+piAId = '233782';
+piCId = '7411';
+piHostname = 'pi.pardot.com';
+
+(function() {
+	function async_load(){
+		var s = document.createElement('script'); s.type = 'text/javascript';
+		s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+		var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+	}
+	if(window.attachEvent) { window.attachEvent('onload', async_load); }
+	else { window.addEventListener('load', async_load, false); }
+})();
+</script>
+
+</body>
+</html>

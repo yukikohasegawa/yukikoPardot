@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<title>Trecked Site</title>
+
+</head>
+<body>
+
+<!-- コンテナ開始 -->
+<div id="container">
+
+<!-- ページ開始 -->
+<div id="page">
+
+
+<!-- ヘッダ開始 -->
+<div id="header" align='center'>
+<img src="bike_cat.jpg" width="800" height="534">
+</div>
+<!-- ヘッダ終了 -->
+
+
+<!-- コンテンツ開始 -->
+<hr class="none">
+<div id="content">
+
+
+<!-- メインカラム開始 -->
+<div id="main">
+
+<div class="section emphasis">
+
+<h2>About this site</h2>
+
+<p> <font color="red">This is test Web page for Yukiko's pardot demo account</font></p>
+
+</div>
+
+<div>
+
+<h2>News</h2>
+
+<dl>
+
+<dt>Apache Webserver for demo site:</dt>
+<dd>1. Remote connection > sftp</dd>
+<dd>2. Apache Folder: /Library/WebServer/Documents/Sites</dd>
+<dd>3. LCD Folder: /Users/yukiko.hasegawa/Documents/Pardot検証/BikeShop</dd>
+<dd>4. <a href="http://qiita.com/shuntaro_tamura/items/bdabcb77926dc92617b1">Apache起動確認</a></dd>
+<dd>5. <a href="https://salesforce.quip.com/pRJyA9dlKZNa">Apache SSL　有効化</a></dd>
+
+<dt>Pardot API test with PHP</dt>
+<dd>リストメンバーシップのクエリー:<a href="http://localhost/Sites/PardotAPIdemo.php?ListID=1338&CreatedAfter=2017-04-13T09:00:00&CreatedBefore=2017-04-14T10:00:00">パラメータ：Join日付（2017-04-13T09:00:00ー2017-04-14T10:00:00）&リストID（1338）</a></dd>
+</dl>
+
+</div>
+
+<div class="section normal">
+
+<h2>General</h2>
+
+<div id="nav">
+<div class="section normal contact">
+
+<h2>Multi accounts in one web site:</h2>
+
+<p><a href="./multi_account.html">Tracking Code Test Ver1</a> >> Multi pardot-standard tracking codes in one web site.</p>
+<p><a href="./multi_in_oneTC.html">Tracking Code Test Ver2</a> >> CustomJS for multi tracking codes in one web site.</p>
+
+</div>
+</div>
+
+<div id="nav">
+<div class="section normal contact">
+
+<h2>Linkt to (local) Wordpress hosting site:</h2>
+
+<p><a href="http://localhost:8080/wordpress/sample-page/">Wordpres Sample pge</a> >> Wordpress hosting page with pardot form.</p>
+<p><a href="http://localhost:8080/wordpress/2018/04/02/hello-world/">Wordpress Sample post </a> >> Wordpress hosting post with pardot form.</p>
+
+</div>
+</div>
+
+</div>
+<!-- メインカラム終了 -->
+
+<!-- サイドバー開始 -->
+<div class="section normal">
+<h2>Product</h2>
+</div>
+
+<div id="nav">
+
+<div class="section emphasis">
+
+<h2>Frame</h2>
+
+<p><a href="https://go.pardot.com/l/232782/2016-12-01/2lmf">BS_Frame_LP(go.pardot.com https)</a></p>
+<p><a href="https://go.yukikolocal.tk/l/232782/2016-12-01/2lmf">BS_Frame_LP(yukikolocal.tk https)</a></p>
+<p><a href="http://go.yukikolocal.tk/l/232782/2016-12-01/2lmf">BS_Frame_LP(yukikolocal.tk http)</a></p>
+
+</div>
+
+<div class="section strong">
+
+<h2>Wheel</h2>
+
+<p><a href="./wheel.html">Go To wheel.html tracked by Pardot tracking code</a></p>
+
+<p>^ Local hosting Website with Pardot tracking Code ^</p>
+<p>^ Testing Pardot hosting image ^</p>
+
+</div>
+
+<div class="section emphasis">
+
+<h2>Apparel</h2>
+
+<p><a href="./apparel.html">Go To apparel.html tracked by Pardot tracking code</a></p>
+
+<p>^ Local hosting Website with Pardot tracking Code ^</p>
+
+</div>
+
+<div class="section normal contact">
+<h2>Pardot Form Handler https version (go.yukikolocal.tk)</h2>
+<p>Form Handler(Catalog Request)　</p>
+<form action="https://go.yukikolocal.tk/l/232782/2016-09-21/zp" method="post">
+<p>
+Email：<input type="text" name="email" size="40">
+</p>
+<p>
+FirstName：<input type="text" name="firstname" size="40">
+</p>
+<p>
+LastName：<input type="text" name="lastname" size="40">
+</p>
+<p>
+承諾しますか？<input type="radio" name="SF_Checkbox" value="" checked="checked" />
+</p>
+<p>
+<input type="submit" value="送信">
+</p>
+</form> 
+
+</div>
+
+</div>
+<!-- サイドバー終了 -->
+
+
+<hr class="clear">
+
+</div>
+<!-- コンテンツ終了 -->
+
+
+<!-- フッタ開始 -->
+<div id="footer">
+<address>
+東京都千代田区丸の内 JPタワー13F
+<br>
+Copyright (C) 2016 YUKIKO'S BIKE SHOP. All Rights Reserved.
+<br>
+Email: yukiko.hasegawa@salesforce.com
+</address>
+</div>
+<!-- フッタ終了 -->
+
+
+</div>
+<!-- ページ終了 -->
+
+</div>
+<!-- コンテナ終了 -->
+<!-- Pardot BikeShopWeb_General Campaign tracking code -->
+<script type="text/javascript">
+piAId = '233782';
+piCId = '2186';
+piHostname = 'pi.pardot.com';
+
+(function() {
+	function async_load(){
+		var s = document.createElement('script'); s.type = 'text/javascript';
+		s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+		var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+	}
+	if(window.attachEvent) { window.attachEvent('onload', async_load); }
+	else { window.addEventListener('load', async_load, false); }
+})();
+</script>
+</body>
+</html>
