@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!-- <meta http-equiv="Content-Security-Policy" content="img-src https://* http://*; 　script-src https://cse.google.com pi.pardot.com s7.addthis.com;"> -->
+<meta http-equiv="Content-Security-Policy" content="img-src https://*; 　script-src *;">
+
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<title>BUI Pageaction A</title>
+
+</head>
+<body>
+<h2>Page Action A</h2>
+
+<p> PardotCamapaignA for BUI Campaign tracking code　が入っている。</p>
+<script type="text/javascript">
+piAId = '738503';
+piCId = '1729';
+piHostname = 'pi.pardot.com';
+
+(function() {
+	function async_load(){
+		var s = document.createElement('script'); s.type = 'text/javascript';
+		s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+		var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+	}
+	if(window.attachEvent) { window.attachEvent('onload', async_load); }
+	else { window.addEventListener('load', async_load, false); }
+})();
+</script>
+
+</body>
+</html>
