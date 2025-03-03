@@ -20,6 +20,8 @@
 <!-- Recaptcha  -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+<!-- Ajax form request  -->	
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"</script>
 
 
 <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -124,6 +126,47 @@
 
 </div>
 
+<div class="section normal contact">
+<h2>Ajax request to Pardot Form Handler https version (go.yukikolocal.com)</h2>
+<p>Form Handler(住所自動入力)　</p>
+<form id="myAjaxForm">
+<p>
+Email：<input type="text" name="email" size="40">
+</p>
+<p>
+郵便番号：<input type="text" name="zip" size="40";>
+</p>
+<p>
+都道府県：<input type="text" name="pref" size="40">
+</p>
+<p>
+住所：<input type="text" name="addr1" size="40">
+</p>
+<p>
+<input type="submit" value="送信">
+</p>
+</form> 
+<script>
+        $(document).ready(function() {
+            $('#myAjaxForm').on('submit', function(event) {
+                event.preventDefault(); // フォームのデフォルトの送信を防ぐ
+
+                var formData = $(this).serialize(); // フォームデータをシリアライズ
+
+                $.ajax({
+                    url: "https://go.yukikolocal.tk/l/232782/2017-07-24/2gjp2",
+                    type: "POST",
+                    data: formData,
+                    success: function(response) {
+                        alert('フォームが正常に送信されました!');
+                    },
+                    error: function(xhr, status, error) {
+                        alert('送信中にエラーが発生しました: ' + error);
+                    }
+                });
+            });
+        });
+    </script>
 
 <div class="section normal contact">
 <h2>Pardot Form Handler https version (go.yukikolocal.com)</h2>
