@@ -27,7 +27,7 @@ PageA→PageB→PageC→PageAを30秒ごとに遷移する（10分間）
 
   if (now - startTime >= durationMs) {
     sessionStorage.removeItem("startTime");
-    console.log("✅ 5分間の自動遷移が完了しました");
+    console.log("✅ 10分間の自動遷移が完了しました");
   } else {
     setTimeout(() => {
       const current = window.location.href;
