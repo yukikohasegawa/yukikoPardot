@@ -16,18 +16,10 @@ PageCはトラッキングしてない
 Cookie削除して、FH（Success Location=PageA）で新規Visitor作成
 <script>
   document.cookie = "visitor_id232782=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-
-const url = "https://go.yukikolocal.com/l/232782/2016-09-21/zp?email=yukiko.hasegawa+cdltest@salesforce.com&firstname=test&lastname=test1&product=GC1000%20series";
-
-  fetch(url, {
-    method: 'GET',
-    mode: 'no-cors'  // クロスドメイン制限を回避（ただしレスポンスは得られない）
-  }).then(() => {
-    console.log("✅ クッキー削除＆FHリクエスト送信完了");
-  }).catch((err) => {
-    console.error("❌ エラー:", err);
-  });
 </script>
+
+<iframe src="https://go.yukikolocal.com/l/232782/2016-09-21/zp?email=yukiko.hasegawa+cdltest@salesforce.com&firstname=test&lastname=test1&product=GC1000%20series" width="1" height="1"></iframe>
+	
 
 	
 
