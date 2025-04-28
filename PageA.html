@@ -9,16 +9,17 @@
 
 </head>
 <body>
-PageAとPageBを30秒ごとに遷移する（五分間）
+PageA→PageB→PageC→PageAを30秒ごとに遷移する（10分間）
 
 <script>
   const urls = [
     "https://heroku.yukikolocal.com/PageA.html",
-    "https://heroku.yukikolocal.com/PageB.html"
+    "https://heroku.yukikolocal.com/PageB.html",
+    "https://heroku.yukikolocal.com/PageC.html"
   ];
 
   const intervalMs = 30000; // 30秒
-  const durationMs = 5 * 60 * 1000; // 5分
+  const durationMs = 10 * 60 * 1000; // 10分
   const startTime = sessionStorage.getItem("startTime") || Date.now();
   sessionStorage.setItem("startTime", startTime);
 
@@ -28,15 +29,15 @@ PageAとPageBを30秒ごとに遷移する（五分間）
     sessionStorage.removeItem("startTime");
     console.log("✅ 5分間の自動遷移が完了しました");
   } else {
-    // 30秒後にもう一方のURLへ遷移
     setTimeout(() => {
       const current = window.location.href;
-      const next = current === urls[0] ? urls[1] : urls[0];
-      window.location.href = next;
+      const currentIndex = urls.findIndex(url => current.includes(url));
+      const nextIndex = (currentIndex + 1) % urls.length;
+      window.location.href = urls[nextIndex];
     }, intervalMs);
   }
 </script>
-
+	
 <!-- Pardot BikeShopWeb_General Campaign tracking code -->
 <script type="text/javascript">
 piAId = '233782';
