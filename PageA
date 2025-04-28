@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PageA (AID: 232782)</title>
+
+</head>
+<body>
+PageAとPageBを30秒ごとに遷移する（五分間）
+
+<script>
+  const urls = [
+    "https://heroku.yukikolocal.com/PageA.html",
+    "https://heroku.yukikolocal.com/PageB.html"
+  ];
+
+  const intervalMs = 30000; // 30秒
+  const durationMs = 5 * 60 * 1000; // 5分
+  const startTime = sessionStorage.getItem("startTime") || Date.now();
+  sessionStorage.setItem("startTime", startTime);
+
+  const now = Date.now();
+
+  if (now - startTime >= durationMs) {
+    sessionStorage.removeItem("startTime");
+    console.log("✅ 5分間の自動遷移が完了しました");
+  } else {
+    // 30秒後にもう一方のURLへ遷移
+    setTimeout(() => {
+      const current = window.location.href;
+      const next = current === urls[0] ? urls[1] : urls[0];
+      window.location.href = next;
+    }, intervalMs);
+  }
+</script>
+
+
+</body>
+</html>
