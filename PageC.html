@@ -9,32 +9,17 @@
 
 </head>
 <body>
-PageA→PageB→PageC→PageAを30秒ごとに遷移する（10分間）
+PageB→PageC→PageBを30秒ごとに遷移する（10分間）
 
-PageCはトラッキングしてない
-
-Cookie削除して、FH（Success Location=PageA）で新規Visitor作成
+<!--
+Cookie削除して新規Visitor作成
 <script>
   document.cookie = "visitor_id232782=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=heroku.yukikolocal.com;";
-
-  const url = "https://go.yukikolocal.com/l/232782/2016-09-21/zp?email=yukiko.hasegawa%2Bcdltest@salesforce.com&firstname=test&lastname=test1&product=GC1000%20series";
-
-  // URLを呼び出すだけなら以下でOK（クエリ送信のみ・画面遷移なし）
-  fetch(url, {
-    method: 'GET',
-    mode: 'no-cors'  // クロスドメイン制限を回避（ただしレスポンスは得られない）
-  }).then(() => {
-    console.log("✅ リクエスト送信完了");
-  }).catch((err) => {
-    console.error("❌ エラー:", err);
-  });
-
 </script>
-
+-->
 
 <script>
   const urls = [
-    "https://heroku.yukikolocal.com/PageA.html",
     "https://heroku.yukikolocal.com/PageB.html",
     "https://heroku.yukikolocal.com/PageC.html"
   ];
@@ -57,6 +42,23 @@ Cookie削除して、FH（Success Location=PageA）で新規Visitor作成
       window.location.href = urls[nextIndex];
     }, intervalMs);
   }
+</script>
+
+  <!-- Pardot BikeShopWeb_General Campaign tracking code -->
+<script type="text/javascript">
+piAId = '233782';
+piCId = '2186';
+piHostname = 'pi.pardot.com';
+
+(function() {
+	function async_load(){
+		var s = document.createElement('script'); s.type = 'text/javascript';
+		s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+		var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+	}
+	if(window.attachEvent) { window.attachEvent('onload', async_load); }
+	else { window.addEventListener('load', async_load, false); }
+})();
 </script>
 	
 </body>
