@@ -10,7 +10,7 @@
 </head>
 <body>
 PageA→Form（https://go.yukikolocal.com/l/232782/2018-01-09/3lhhy
-）→LP(https://go.yukikolocal.com/l/232782/2025-04-29/287bczy)→PageAを30秒ごとに遷移する（10分間）
+）→LP(https://go.yukikolocal.com/l/232782/2025-04-29/287bczy)→PageAを30分ごとに遷移する（1.5時間）
 
 <script>
   const urls = [
@@ -19,8 +19,8 @@ PageA→Form（https://go.yukikolocal.com/l/232782/2018-01-09/3lhhy
     "https://go.yukikolocal.com/l/232782/2025-04-29/287bczy"
   ];
 
-  const intervalMs = 30000; // 30秒
-  const durationMs = 10 * 60 * 1000; // 10分
+  const intervalMs = 1800000; // 30分
+  const durationMs = 90 * 60 * 1000; // 1.5時間
   const startTime = sessionStorage.getItem("startTime") || Date.now();
   sessionStorage.setItem("startTime", startTime);
 
@@ -28,7 +28,7 @@ PageA→Form（https://go.yukikolocal.com/l/232782/2018-01-09/3lhhy
 
   if (now - startTime >= durationMs) {
     sessionStorage.removeItem("startTime");
-    console.log("✅ 10分間の自動遷移が完了しました");
+    console.log("✅ 1.5時間の自動遷移が完了しました");
   } else {
     setTimeout(() => {
       const current = window.location.href;
