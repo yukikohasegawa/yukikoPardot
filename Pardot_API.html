@@ -3,23 +3,23 @@
 <body>
 <h1>セールスフォスOauthフロー　でMCAE API用のToken取得</h1>
 
-1.Core組織にログインしてコードを取得： 
+1.Core組織にログインしてコードを取得： <br>
  <a href=
 "https://login.salesforce.com/services/oauth2/authorize?response_type=code&client_id=3MVG9pe2TCoA1Pf77NmVXjIzZ598egMmhoPMJu3G2rj7IM9aP8p95rA6698aTYTl3O9JmkIGQOaDYIAaME869&redirect_uri=https://heroku.yukikolocal.com/Pardot_API.html&scope=pardot_api"> Connect with Pardot </a>
 
 
-2.  Responseで取得したCode　を使って、Tokenを取得
+2.  Responseで取得したCode　を使って、Tokenを取得 <br>
 例：
-＝＝＝
+＜code＞
 curl --location 'https://login.salesforce.com/services/oauth2/token' \
 --header 'Authorization: Basic Og==' \
 --header 'Cookie: BrowserId=GvrIjK_wEfCk40GaSQuDmg; CookieConsentPolicy=0:0; LSKey-c$CookieConsentPolicy=0:0' \
 --form 'grant_type="authorization_code"' \
---form 'client_id=＜CLIENT_ID＞' \　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　＜＜＜＜接続App設定から取得
+--form 'client_id=＜CLIENTID＞' \　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　＜＜＜＜接続App設定から取得
 --form 'client_secret=<CONSUMER_SECRET>' \　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　＜＜＜＜接続App設定から取得
 --form 'code="aPrxKlcUBVrDN50Lcwmbt2c_WTvm0Z47JjCR7OcQs.GAU0rreGve_qSV22.SsLHquJ7BEGAWOA=="' \    ＜＜＜ ここに入れる
 --form 'redirect_uri="https://heroku.yukikolocal.com/Pardot_API.html"'　　　　　　　　　　　　　　　　＜＜＜＜接続Appで指定しているやつ
-＝＝＝
+</code>
 
 <h2>参考APIDoc</h2>
 https://developer.salesforce.com/docs/marketing/pardot/guide/getting-started.html
