@@ -4,10 +4,11 @@
 <meta http-equiv="Content-Style-Type" content="text/css">
 <meta http-equiv="Content-Script-Type" content="text/javascript">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex" />
 </head>
 
 <body>
-<h1>セールスフォスOauthフローでMCAE API用のToken取得</h1>
+<h1>セールスフォ-スOauthフローでMCAE API用のToken取得</h1>
 
 1.Core組織にログインしてコードを取得： <br>
 <br>
@@ -27,8 +28,8 @@ curl --location 'https://login.salesforce.com/services/oauth2/token' \
 --header 'Cookie: BrowserId=GvrIjK_wEfCk40GaSQuDmg; CookieConsentPolicy=0:0; LSKey-c$CookieConsentPolicy=0:0' \
 --form 'grant_type="authorization_code"' \
 --form 'client_id=＜CLIENTID＞' \　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　＜＜＜＜接続App設定から取得
---form 'client_secret=<CONSUMER_SECRET>' \　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　＜＜＜＜接続App設定から取得
---form 'code="aPrxKlcUBVrDN50Lcwmbt2c_WTvm0Z47JjCR7OcQs.GAU0rreGve_qSV22.SsLHquJ7BEGAWOA=="' \    ＜＜＜ ここに入れる
+--form 'client_secret=＜CONSUMER SECRET＞' \　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　＜＜＜＜接続App設定から取得
+--form 'code="＜CODE＞"' \    ＜＜＜ ここに入れる
 --form 'redirect_uri="https://heroku.yukikolocal.com/Pardot_API.html"'　　　　　　　　　　　　　　　　＜＜＜＜接続Appで指定しているやつ
 </code>
 </pre>
